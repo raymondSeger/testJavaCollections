@@ -37,5 +37,8 @@ public class Main {
             // System.out.println(product);
         }
 
+        // check if it contains X
+        System.out.println(products.contains(window));
+
     }
 }

@@ -40,5 +40,9 @@ public class Main {
         // check if it contains X
         System.out.println(products.contains(window));
 
+        products.remove(floorPanel);
+
+        System.out.println(products);
+
     }
 }

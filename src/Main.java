@@ -26,6 +26,7 @@ public class Main {
             if (product.getWeight() > 20) {
                 System.out.println(product);
             } else {
+                // You need to use the iterator because the object is being iterated, if you modify it, it will give error
                 productIterator.remove();
             }
         }

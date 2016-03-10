@@ -1,6 +1,35 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Product door        = new Product("Wooden Door", 35);
+        Product floorPanel  = new Product("Floor Panel", 25);
+        Product window      = new Product("Glass Window", 10);
+
+        // This collection will only have Product instances
+        Collection<Product> products = new ArrayList<>();
+        products.add(door);
+        products.add(floorPanel);
+        products.add(window);
+
+        // System.out.println(products);
+
+        // test Iterator inside a collection
+        // Way 1
+        final Iterator<Product> productIterator = products.iterator();
+        while(productIterator.hasNext()) {
+            Product product = productIterator.next();
+            System.out.println(product);
+        }
+
+        // Way 2, same thing with Way 1
+        for( Product product: products) {
+            System.out.println(product);
+        }
+
     }
 }
